@@ -241,28 +241,28 @@ int main()
     Node* head=arrto2dll(arr);
 
     //deletion at head
-    //head=deleteHead(head);
+    head=deleteHead(head);
 
     //deletion at tail
-    //head=deleteTail(head);
+    head=deleteTail(head);
 
     //deletion of kth(position) node
-    //head=deleteKth(head,2);
+    head=deleteKth(head,2);
 
     //deletion of a val node
-    //head=deleteval(head,1);
+    head=deleteval(head,1);
 
     //insertion at head
-    //head=insertHead(head,8);
+    head=insertHead(head,8);
 
     //insertion at tail
-    //head=insertTail(head,69);
+    head=insertTail(head,69);
 
     //insertion at kth position
     head=insertKth(head,5,100);
 
     //insertion after a value
-    //head=insertafterval(head,7,73);
+    head=insertafterval(head,7,73);
 
     //traverse and print
     Node* temp=head;
