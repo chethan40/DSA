@@ -28,6 +28,9 @@ DLLNode* reverseDLL(DLLNode* head) {
         return head;
     }
 
+//TC->O(2N) 
+//SC->O(N)  of stack
+
 //Optimal
 //reverse next and prev pointer of a node
 
@@ -46,3 +49,6 @@ DLLNode* reverseDLL(DLLNode* head) {
         }
         return last->prev;
     }
+
+//TC->O(N) 
+//SC->O(1)
