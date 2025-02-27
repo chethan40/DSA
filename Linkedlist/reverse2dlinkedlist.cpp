@@ -1,4 +1,4 @@
-//Reverse a linked list
+//Reverse a doubly linked list
 
 //input : 3->4->5
 //output : 5->4->3
@@ -32,7 +32,7 @@ DLLNode* reverseDLL(DLLNode* head) {
 //SC->O(N)  of stack
 
 //Optimal
-//reverse next and prev pointer of a node
+//swap next and prev pointer of a node
 
 DLLNode* reverseDLL(DLLNode* head) {
         if(head==nullptr || head->next==nullptr) return head;
