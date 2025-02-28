@@ -4,7 +4,7 @@
 //output : 3
 
 //input : 1->2->3->4->5->6
-//output : 4 (if odd length return second mid)
+//output : 4 (if even length return second mid)
 
 //Brute force
 //find the length of ll and return mid of ll
