@@ -30,7 +30,7 @@ ListNode* middleNode(ListNode* head) {
         return temp;
     }
 
-//TC->O(N/2)
+//TC->O(N+N/2)
 //SC->O(1)
 
 //optimal
