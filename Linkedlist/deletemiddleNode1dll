@@ -1,0 +1,64 @@
+//delete middle Node in 1Dll
+//similar to find middle node
+//input: 1->2->3->4->5
+//output: 1->2->4->5
+//even length delete 2nd mid
+//input: 1->2->3->4->5->6
+//output: 1->2->3->5->6
+
+//brute force
+//find length of ll
+//traverse till mid-1 and delete mid
+
+ListNode* deleteMiddle(ListNode* head) {
+        if(head==nullptr || head->next==nullptr) return nullptr;
+       ListNode* temp=head;
+        int cnt=0;
+        while(temp!=nullptr)
+        {
+            cnt++;
+            temp=temp->next;
+        }
+
+        int midnode=(cnt/2);
+        temp=head;
+        while(temp!=nullptr)
+        {
+            midnode=midnode-1;
+            if(midnode==0) break;
+            temp=temp->next;
+        }
+        ListNode* nextnode=temp->next;
+        temp->next=temp->next->next;
+        delete nextnode;
+
+        return head;
+    }
+//TC->O(N+N/2)
+//SC->O(1)
+
+//optimal 
+//tortoise hare algo
+
+//we need to write code to point before the middle node
+//so we will skip a step of slow by pointing fast=fast->next->next first
+
+ListNode* deleteMiddle(ListNode* head) {
+        if(head==nullptr || head->next==nullptr) return nullptr;
+        ListNode* slow=head;
+        ListNode* fast=head;
+
+        fast=fast->next->next; //skip a slow move
+        while(fast!=nullptr && fast->next!=nullptr)
+        {
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        ListNode* nextnode=slow->next;
+        slow->next=slow->next->next;
+        delete nextnode;
+
+        return head;
+    }
+//TC->~O(N)
+//SC->O(1)
